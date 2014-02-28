@@ -1,0 +1,153 @@
+Request 
+http://dict.youdao.com/wordbook/ajax?action=getoneword&q=parallax&date=Thu%20Jul%2011%202013%2016:05:17%20GMT+0800%20(CST)
+http://dict.youdao.com/wordbook/ajax?action=getoneword&q=curve&date=Thu%20Jul%2011%202013%2016:09:23%20GMT+0800%20(CST)
+http://dict.youdao.com/wordbook/ajax?action=getoneword&q=curve&date=Thu Jul 11 2013 16:12:07 GMT+0800 (CST)
+######
+GET /wordbook/ajax?action=getoneword&q=parallax&date=Thu%20Jul%2011%202013%2016:05:17%20GMT+0800%20(CST) HTTP/1.1
+Host: dict.youdao.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36
+Referer: http://dict.youdao.com/search?le=eng&q=parallax&keyfrom=dict.top
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: OUTFOX_SEARCH_USER_ID=1084129262@123.120.170.251; JSESSIONID=abcRy7_AmDuFFdiPWejWt; youdao_session_info=c2lkPTQ2NTYyOTk3MjY5OTgxMjEyMTEtMTp0aW1lPTEzNTc4NzYwNjM3Mzk6cHY9MQ==; DESKDICT_VENDOR=cidian.youdao.com; tabRecord.eTransform=%23wordGroup; tabRecord.authTrans=%23collinsResult; _PREF_USER__MYTH=dT1sZW9sb3ZlbmV0QDE2My5jb206c2tpbi5pZD0wXzA6aGFzbG9nZ2VkPXRydWU=; NTES_SESS=PZT8SlOsxgRDkd3oAaID4.yiZ2zae2fQBRJhmVjheAwhnE2MzI4.YeeIJixWmJAVvOzb36jrPiWPwvB2M98Ly90gYK7ART0CJjCZgf6tvsMwNN0r5.L3jIpTzT2Q8rPTbNKesNyX7M9zVnwEZxKUOq0PCK0WHutp.p.y3cV4BunH5; S_INFO=1373467185|0|2&90##|leolovenet; P_INFO=leolovenet@163.com|1373467185|1|search|11&17|bej&1372840877&search#bej&null#10#0#0|139011&0|cloudmusic&search&blog|leolovenet@163.com; NTES_PASSPORT=qLLbv6hwvQexio4ZFJzv_8xhtFDEKmXnEmAuPOUk_17hafsVnld8MbbltZ7zQt2k9DlSC3eJNcxIJ1ZVk1GzRsw2RyKoKimepuCi0Q3bDbnso; _ntes_nnid=96d5204584bc75908b89b94244d123a9,1373507890300; ___rl__test__cookies=1373529579809
+
+
+GET /wordbook/ajax?action=getoneword&q=curve&date=Thu%20Jul%2011%202013%2016:09:23%20GMT+0800%20(CST) HTTP/1.1
+Host: dict.youdao.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36
+Referer: http://dict.youdao.com/search?le=eng&q=curve&keyfrom=dict.top
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: OUTFOX_SEARCH_USER_ID=1084129262@123.120.170.251; JSESSIONID=abcRy7_AmDuFFdiPWejWt; youdao_session_info=c2lkPTQ2NTYyOTk3MjY5OTgxMjEyMTEtMTp0aW1lPTEzNTc4NzYwNjM3Mzk6cHY9MQ==; DESKDICT_VENDOR=cidian.youdao.com; tabRecord.eTransform=%23wordGroup; tabRecord.authTrans=%23collinsResult; _PREF_USER__MYTH=dT1sZW9sb3ZlbmV0QDE2My5jb206c2tpbi5pZD0wXzA6aGFzbG9nZ2VkPXRydWU=; NTES_SESS=PZT8SlOsxgRDkd3oAaID4.yiZ2zae2fQBRJhmVjheAwhnE2MzI4.YeeIJixWmJAVvOzb36jrPiWPwvB2M98Ly90gYK7ART0CJjCZgf6tvsMwNN0r5.L3jIpTzT2Q8rPTbNKesNyX7M9zVnwEZxKUOq0PCK0WHutp.p.y3cV4BunH5; S_INFO=1373467185|0|2&90##|leolovenet; P_INFO=leolovenet@163.com|1373467185|1|search|11&17|bej&1372840877&search#bej&null#10#0#0|139011&0|cloudmusic&search&blog|leolovenet@163.com; NTES_PASSPORT=qLLbv6hwvQexio4ZFJzv_8xhtFDEKmXnEmAuPOUk_17hafsVnld8MbbltZ7zQt2k9DlSC3eJNcxIJ1ZVk1GzRsw2RyKoKimepuCi0Q3bDbnso; _ntes_nnid=96d5204584bc75908b89b94244d123a9,1373507890300; ___rl__test__cookies=1373529579809
+
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+    <result><![CDATA[hasword]]></result>
+	<word><![CDATA[parallax]]></word>
+    <phonetic><![CDATA[['pærəlæks]]]></phonetic>
+    <trans><![CDATA[n. 视差；著名的影视编辑软件]]></trans>
+    <tags><![CDATA[]]></tags>
+    <taglist>
+        <tagitem><![CDATA[无标签]]></tagitem>
+        </taglist>
+</data>
+
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+    <result><![CDATA[hasword]]></result>
+	<word><![CDATA[curve]]></word>
+    <phonetic><![CDATA[[kɜːv]]]></phonetic>
+    <trans><![CDATA[n. 曲线；弯曲；曲线球；曲线图表 
+adj. 弯曲的；曲线形的 
+vt. 弯；使弯曲 
+vi. 成曲形]]></trans>
+    <tags><![CDATA[]]></tags>
+    <taglist>
+        <tagitem><![CDATA[无标签]]></tagitem>
+        </taglist>
+</data>
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<data>
+    <result><![CDATA[noword]]></result>
+	<word><![CDATA[]]></word>
+    <phonetic><![CDATA[]]></phonetic>
+    <trans><![CDATA[]]></trans>
+    <tags><![CDATA[]]></tags>
+    <taglist>
+        </taglist>
+</data>
+
+
+http://dict.youdao.com/wordbook/ajax?action=addword&q=parallax&date=Thu%20Jul%2011%202013%2016:04:37%20GMT+0800%20(CST)&phonetic=%5B'p%C3%A6r%C9%99l%C3%A6ks%5D&trans=n.+%E8%A7%86%E5%B7%AE%EF%BC%9B%E8%91%97%E5%90%8D%E7%9A%84%E5%BD%B1%E8%A7%86%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6&tags=
+GET /wordbook/ajax?action=addword&q=parallax&date=Thu%20Jul%2011%202013%2016:04:37%20GMT+0800%20(CST)&phonetic=%5B'p%C3%A6r%C9%99l%C3%A6ks%5D&trans=n.+%E8%A7%86%E5%B7%AE%EF%BC%9B%E8%91%97%E5%90%8D%E7%9A%84%E5%BD%B1%E8%A7%86%E7%BC%96%E8%BE%91%E8%BD%AF%E4%BB%B6&tags= HTTP/1.1
+Host: dict.youdao.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36
+Referer: http://dict.youdao.com/search?le=eng&q=parallax&keyfrom=dict.top
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: OUTFOX_SEARCH_USER_ID=1084129262@123.120.170.251; JSESSIONID=abcRy7_AmDuFFdiPWejWt; youdao_session_info=c2lkPTQ2NTYyOTk3MjY5OTgxMjEyMTEtMTp0aW1lPTEzNTc4NzYwNjM3Mzk6cHY9MQ==; DESKDICT_VENDOR=cidian.youdao.com; tabRecord.eTransform=%23wordGroup; tabRecord.authTrans=%23collinsResult; _PREF_USER__MYTH=dT1sZW9sb3ZlbmV0QDE2My5jb206c2tpbi5pZD0wXzA6aGFzbG9nZ2VkPXRydWU=; NTES_SESS=PZT8SlOsxgRDkd3oAaID4.yiZ2zae2fQBRJhmVjheAwhnE2MzI4.YeeIJixWmJAVvOzb36jrPiWPwvB2M98Ly90gYK7ART0CJjCZgf6tvsMwNN0r5.L3jIpTzT2Q8rPTbNKesNyX7M9zVnwEZxKUOq0PCK0WHutp.p.y3cV4BunH5; S_INFO=1373467185|0|2&90##|leolovenet; P_INFO=leolovenet@163.com|1373467185|1|search|11&17|bej&1372840877&search#bej&null#10#0#0|139011&0|cloudmusic&search&blog|leolovenet@163.com; NTES_PASSPORT=qLLbv6hwvQexio4ZFJzv_8xhtFDEKmXnEmAuPOUk_17hafsVnld8MbbltZ7zQt2k9DlSC3eJNcxIJ1ZVk1GzRsw2RyKoKimepuCi0Q3bDbnso; _ntes_nnid=96d5204584bc75908b89b94244d123a9,1373507890300; ___rl__test__cookies=1373529579809
+
+
+GET /wordbook/ajax?action=addword&q=curve&date=Thu%20Jul%2011%202013%2016:12:44%20GMT+0800%20(CST)&phonetic=%5Bk%C9%9C%CB%90v%5D&trans=n.+%E6%9B%B2%E7%BA%BF%EF%BC%9B%E5%BC%AF%E6%9B%B2%EF%BC%9B%E6%9B%B2%E7%BA%BF%E7%90%83%EF%BC%9B%E6%9B%B2%E7%BA%BF%E5%9B%BE%E8%A1%A8+%0Aadj.+%E5%BC%AF%E6%9B%B2%E7%9A%84%EF%BC%9B%E6%9B%B2%E7%BA%BF%E5%BD%A2%E7%9A%84+%0Avt.+%E5%BC%AF%EF%BC%9B%E4%BD%BF%E5%BC%AF%E6%9B%B2+%0Avi.+%E6%88%90%E6%9B%B2%E5%BD%A2&tags= HTTP/1.1
+/wordbook/ajax?action=addword&q=curve&date=Thu Jul 11 2013 16:12:44 GMT+0800 (CST)&phonetic=[kɜːv]&trans=n.+曲线；弯曲；曲线球；曲线图表+
+adj.+弯曲的；曲线形的+
+vt.+弯；使弯曲+
+vi.+成曲形&tags=
+
+Host: dict.youdao.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36
+Referer: http://dict.youdao.com/search?le=eng&q=curve&keyfrom=dict.top
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: OUTFOX_SEARCH_USER_ID=1084129262@123.120.170.251; JSESSIONID=abcRy7_AmDuFFdiPWejWt; youdao_session_info=c2lkPTQ2NTYyOTk3MjY5OTgxMjEyMTEtMTp0aW1lPTEzNTc4NzYwNjM3Mzk6cHY9MQ==; DESKDICT_VENDOR=cidian.youdao.com; tabRecord.eTransform=%23wordGroup; tabRecord.authTrans=%23collinsResult; _PREF_USER__MYTH=dT1sZW9sb3ZlbmV0QDE2My5jb206c2tpbi5pZD0wXzA6aGFzbG9nZ2VkPXRydWU=; NTES_SESS=PZT8SlOsxgRDkd3oAaID4.yiZ2zae2fQBRJhmVjheAwhnE2MzI4.YeeIJixWmJAVvOzb36jrPiWPwvB2M98Ly90gYK7ART0CJjCZgf6tvsMwNN0r5.L3jIpTzT2Q8rPTbNKesNyX7M9zVnwEZxKUOq0PCK0WHutp.p.y3cV4BunH5; S_INFO=1373467185|0|2&90##|leolovenet; P_INFO=leolovenet@163.com|1373467185|1|search|11&17|bej&1372840877&search#bej&null#10#0#0|139011&0|cloudmusic&search&blog|leolovenet@163.com; NTES_PASSPORT=qLLbv6hwvQexio4ZFJzv_8xhtFDEKmXnEmAuPOUk_17hafsVnld8MbbltZ7zQt2k9DlSC3eJNcxIJ1ZVk1GzRsw2RyKoKimepuCi0Q3bDbnso; _ntes_nnid=96d5204584bc75908b89b94244d123a9,1373507890300; ___rl__test__cookies=1373529579809
+
+{"message":"editdone"}
+{"message":"editdone"}
+
+
+
+
+
+
+http://dict.youdao.com/wordbook/ajax?action=addword&q=home&date=Thu%20Jul%2011%202013%2017:57:22%20GMT+0800%20(CST)&le=eng
+GET /wordbook/ajax?action=addword&q=home&date=Thu%20Jul%2011%202013%2017:57:22%20GMT+0800%20(CST)&le=eng HTTP/1.1
+Host: dict.youdao.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36
+Referer: http://dict.youdao.com/search?le=eng&q=home&keyfrom=dict.top
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: OUTFOX_SEARCH_USER_ID=1084129262@123.120.170.251; JSESSIONID=abcRy7_AmDuFFdiPWejWt; youdao_session_info=c2lkPTQ2NTYyOTk3MjY5OTgxMjEyMTEtMTp0aW1lPTEzNTc4NzYwNjM3Mzk6cHY9MQ==; DESKDICT_VENDOR=cidian.youdao.com; tabRecord.eTransform=%23wordGroup; tabRecord.authTrans=%23collinsResult; _PREF_USER__MYTH=dT1sZW9sb3ZlbmV0QDE2My5jb206c2tpbi5pZD0wXzA6aGFzbG9nZ2VkPXRydWU=; NTES_SESS=PZT8SlOsxgRDkd3oAaID4.yiZ2zae2fQBRJhmVjheAwhnE2MzI4.YeeIJixWmJAVvOzb36jrPiWPwvB2M98Ly90gYK7ART0CJjCZgf6tvsMwNN0r5.L3jIpTzT2Q8rPTbNKesNyX7M9zVnwEZxKUOq0PCK0WHutp.p.y3cV4BunH5; S_INFO=1373467185|0|2&90##|leolovenet; P_INFO=leolovenet@163.com|1373467185|1|search|11&17|bej&1372840877&search#bej&null#10#0#0|139011&0|cloudmusic&search&blog|leolovenet@163.com; NTES_PASSPORT=qLLbv6hwvQexio4ZFJzv_8xhtFDEKmXnEmAuPOUk_17hafsVnld8MbbltZ7zQt2k9DlSC3eJNcxIJ1ZVk1GzRsw2RyKoKimepuCi0Q3bDbnso; ___rl__test__cookies=1373535924340; _ntes_nnid=96d5204584bc75908b89b94244d123a9,1373507890300
+
+{"message":"adddone"}
+
+
+
+
+
+http://dict.youdao.com/wordbook/ajax?action=delword&q=home&date=Thu%20Jul%2011%202013%2017:59:07%20GMT+0800%20(CST)
+GET /wordbook/ajax?action=delword&q=home&date=Thu%20Jul%2011%202013%2017:59:07%20GMT+0800%20(CST) HTTP/1.1
+Host: dict.youdao.com
+Connection: keep-alive
+Cache-Control: no-cache
+Pragma: no-cache
+Accept: */*
+X-Requested-With: XMLHttpRequest
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36
+Referer: http://dict.youdao.com/search?le=eng&q=home&keyfrom=dict.top
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: en-US,en;q=0.8,zh-CN;q=0.6,zh;q=0.4,zh-TW;q=0.2
+Cookie: OUTFOX_SEARCH_USER_ID=1084129262@123.120.170.251; JSESSIONID=abcRy7_AmDuFFdiPWejWt; youdao_session_info=c2lkPTQ2NTYyOTk3MjY5OTgxMjEyMTEtMTp0aW1lPTEzNTc4NzYwNjM3Mzk6cHY9MQ==; DESKDICT_VENDOR=cidian.youdao.com; tabRecord.eTransform=%23wordGroup; tabRecord.authTrans=%23collinsResult; _PREF_USER__MYTH=dT1sZW9sb3ZlbmV0QDE2My5jb206c2tpbi5pZD0wXzA6aGFzbG9nZ2VkPXRydWU=; NTES_SESS=PZT8SlOsxgRDkd3oAaID4.yiZ2zae2fQBRJhmVjheAwhnE2MzI4.YeeIJixWmJAVvOzb36jrPiWPwvB2M98Ly90gYK7ART0CJjCZgf6tvsMwNN0r5.L3jIpTzT2Q8rPTbNKesNyX7M9zVnwEZxKUOq0PCK0WHutp.p.y3cV4BunH5; S_INFO=1373467185|0|2&90##|leolovenet; P_INFO=leolovenet@163.com|1373467185|1|search|11&17|bej&1372840877&search#bej&null#10#0#0|139011&0|cloudmusic&search&blog|leolovenet@163.com; NTES_PASSPORT=qLLbv6hwvQexio4ZFJzv_8xhtFDEKmXnEmAuPOUk_17hafsVnld8MbbltZ7zQt2k9DlSC3eJNcxIJ1ZVk1GzRsw2RyKoKimepuCi0Q3bDbnso; ___rl__test__cookies=1373536725477; _ntes_nnid=96d5204584bc75908b89b94244d123a9,1373507890300
+
+
+{"success":"1"}
