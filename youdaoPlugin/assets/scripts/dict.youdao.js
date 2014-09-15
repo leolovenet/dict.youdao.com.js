@@ -2,8 +2,7 @@
 // @name        Dict.YouDao.com
 // @namespace   DictYouDao
 // @Author      leolovenet(http://leolovenet.com)
-// @description 增强有道字典(dict.youdao.com)的交互,针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能.需先安装 chrome+NinjaKit ( https://chrome.google.com/webstore/detail/ninjakit/gpbepnljaakggeobkclonlkhbdgccfek ).
-// @require     http://d.bbkanba.com/firefox/greasemonkey/jquery.js
+// @description 增强有道字典(dict.youdao.com)的交互,针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能。
 // @include     http://dict.youdao.com/search*
 // @version     1.0
 // ==/UserScript==
@@ -15,24 +14,24 @@ window.addEventListener ("load", Greasemonkey_main, false);
     jQuery.fn.__bind__ = jQuery.fn.bind;
     jQuery.fn.__unbind__ = jQuery.fn.unbind;
     jQuery.fn.__find__ = jQuery.fn.find;
-    
+
     var hotkeys = {
         version: '0.7.9',
         override: /keypress|keydown|keyup/g,
         triggersMap: {},
-        
-        specialKeys: { 27: 'esc', 9: 'tab', 32:'space', 13: 'return', 8:'backspace', 145: 'scroll', 
+
+        specialKeys: { 27: 'esc', 9: 'tab', 32:'space', 13: 'return', 8:'backspace', 145: 'scroll',
             20: 'capslock', 144: 'numlock', 19:'pause', 45:'insert', 36:'home', 46:'del',
-            35:'end', 33: 'pageup', 34:'pagedown', 37:'left', 38:'up', 39:'right',40:'down', 
-            109: '-', 
-            112:'f1',113:'f2', 114:'f3', 115:'f4', 116:'f5', 117:'f6', 118:'f7', 119:'f8', 
+            35:'end', 33: 'pageup', 34:'pagedown', 37:'left', 38:'up', 39:'right',40:'down',
+            109: '-',
+            112:'f1',113:'f2', 114:'f3', 115:'f4', 116:'f5', 117:'f6', 118:'f7', 119:'f8',
             120:'f9', 121:'f10', 122:'f11', 123:'f12', 191: '/'},
-        
-        shiftNums: { "`":"~", "1":"!", "2":"@", "3":"#", "4":"$", "5":"%", "6":"^", "7":"&", 
-            "8":"*", "9":"(", "0":")", "-":"_", "=":"+", ";":":", "'":"\"", ",":"<", 
+
+        shiftNums: { "`":"~", "1":"!", "2":"@", "3":"#", "4":"$", "5":"%", "6":"^", "7":"&",
+            "8":"*", "9":"(", "0":")", "-":"_", "=":"+", ";":":", "'":"\"", ",":"<",
             ".":">",  "/":"?",  "\\":"|" },
-        
-        newTrigger: function (type, combi, callback) { 
+
+        newTrigger: function (type, combi, callback) {
             // i.e. {'keyup': {'ctrl': {cb: callback, disableInInput: false}}}
             var result = {};
             result[type] = {};
@@ -43,19 +42,19 @@ window.addEventListener ("load", Greasemonkey_main, false);
     // add firefox num pad char codes
     //if (jQuery.browser.mozilla){
     // add num pad char codes
-    hotkeys.specialKeys = jQuery.extend(hotkeys.specialKeys, { 96: '0', 97:'1', 98: '2', 99: 
-        '3', 100: '4', 101: '5', 102: '6', 103: '7', 104: '8', 105: '9', 106: '*', 
+    hotkeys.specialKeys = jQuery.extend(hotkeys.specialKeys, { 96: '0', 97:'1', 98: '2', 99:
+        '3', 100: '4', 101: '5', 102: '6', 103: '7', 104: '8', 105: '9', 106: '*',
         107: '+', 109: '-', 110: '.', 111 : '/'
         });
     //}
-    
-    // a wrapper around of $.fn.find 
+
+    // a wrapper around of $.fn.find
     // see more at: http://groups.google.com/group/jquery-en/browse_thread/thread/18f9825e8d22f18d
     jQuery.fn.find = function( selector ) {
         this.query = selector;
         return jQuery.fn.__find__.apply(this, arguments);
 	};
-    
+
     jQuery.fn.unbind = function (type, combi, fn){
         if (jQuery.isFunction(combi)){
             fn = combi;
@@ -71,26 +70,26 @@ window.addEventListener ("load", Greasemonkey_main, false);
         // call jQuery original unbind
         return  this.__unbind__(type, fn);
     };
-    
+
     jQuery.fn.bind = function(type, data, fn){
         // grab keyup,keydown,keypress
         var handle = type.match(hotkeys.override);
-        
+
         if (jQuery.isFunction(data) || !handle){
             // call jQuery.bind only
             return this.__bind__(type, data, fn);
         }
         else{
             // split the job
-            var result = null,            
+            var result = null,
             // pass the rest to the original $.fn.bind
             pass2jq = jQuery.trim(type.replace(hotkeys.override, ''));
-            
+
             // see if there are other types, pass them to the original $.fn.bind
             if (pass2jq){
                 result = this.__bind__(pass2jq, data, fn);
-            }            
-            
+            }
+
             if (typeof data === "string"){
                 data = {'combi': data};
             }
@@ -100,10 +99,10 @@ window.addEventListener ("load", Greasemonkey_main, false);
                     var combi = data.combi.toLowerCase(),
                         trigger = hotkeys.newTrigger(eventType, combi, fn),
                         selectorId = ((this.prevObject && this.prevObject.query) || (this[0].id && this[0].id) || this[0]).toString();
-                        
+
                     //trigger[eventType][combi].propagate = data.propagate;
                     trigger[eventType][combi].disableInInput = data.disableInInput;
-                    
+
                     // first time selector is bounded
                     if (!hotkeys.triggersMap[selectorId]) {
                         hotkeys.triggersMap[selectorId] = trigger;
@@ -123,12 +122,12 @@ window.addEventListener ("load", Greasemonkey_main, false);
                     else {
                         hotkeys.triggersMap[selectorId][eventType][combi][mapPoint.length] = trigger[eventType][combi];
                     }
-                    
+
                     // add attribute and call $.event.add per matched element
                     this.each(function(){
                         // jQuery wrapper for the current element
                         var jqElem = jQuery(this);
-                        
+
                         // element already associated with another collection
                         if (jqElem.attr('hkId') && jqElem.attr('hkId') !== selectorId){
                             selectorId = jqElem.attr('hkId') + ";" + selectorId;
@@ -141,7 +140,7 @@ window.addEventListener ("load", Greasemonkey_main, false);
             return result;
         }
     };
-    // work-around for opera and safari where (sometimes) the target is the element which was last 
+    // work-around for opera and safari where (sometimes) the target is the element which was last
     // clicked with the mouse and not the document event it would make sense to get the document
     hotkeys.findElement = function (elem){
         if (!jQuery(elem).attr('hkId')){
@@ -155,10 +154,10 @@ window.addEventListener ("load", Greasemonkey_main, false);
     };
     // the event handler
     hotkeys.handler = function(event) {
-        var target = hotkeys.findElement(event.currentTarget), 
+        var target = hotkeys.findElement(event.currentTarget),
             jTarget = jQuery(target),
             ids = jTarget.attr('hkId');
-        
+
         if(ids){
             ids = ids.split(';');
             var code = event.which,
@@ -167,8 +166,8 @@ window.addEventListener ("load", Greasemonkey_main, false);
                 // prevent f5 overlapping with 't' (or f4 with 's', etc.)
                 character = !special && String.fromCharCode(code).toLowerCase(),
                 shift = event.shiftKey,
-                ctrl = event.ctrlKey,            
-                // patch for jquery 1.2.5 && 1.2.6 see more at:  
+                ctrl = event.ctrlKey,
+                // patch for jquery 1.2.5 && 1.2.6 see more at:
                 // http://groups.google.com/group/jquery-en/browse_thread/thread/83e10b3bb1f1c32b
                 alt = event.altKey || event.originalEvent.altKey,
                 mapPoint = null;
@@ -179,9 +178,9 @@ window.addEventListener ("load", Greasemonkey_main, false);
                     break;
                 }
             }
-            
-            //find by: id.type.combi.options            
-            if (mapPoint){ 
+
+            //find by: id.type.combi.options
+            if (mapPoint){
                 var trigger;
                 // event type is associated with the hkId
                 if(!shift && !ctrl && !alt) { // No Modifiers
@@ -197,7 +196,7 @@ window.addEventListener ("load", Greasemonkey_main, false);
                     trigger = mapPoint[modif+special];
                     if (!trigger){
                         if (character){
-                            trigger = mapPoint[modif+character] 
+                            trigger = mapPoint[modif+character]
                                 || mapPoint[modif+hotkeys.shiftNums[character]]
                                 // '$' can be triggered as 'Shift+4' or 'Shift+$' or just '$'
                                 || (modif === 'shift+' && mapPoint[hotkeys.shiftNums[character]]);
@@ -210,11 +209,11 @@ window.addEventListener ("load", Greasemonkey_main, false);
                         if(trigger[x].disableInInput){
                             // double check event.currentTarget and event.target
                             var elem = jQuery(event.target);
-                            if (jTarget.is("input") || jTarget.is("textarea") || jTarget.is("select") 
+                            if (jTarget.is("input") || jTarget.is("textarea") || jTarget.is("select")
                                 || elem.is("input") || elem.is("textarea") || elem.is("select")) {
                                 return true;
                             }
-                        }                       
+                        }
                         // call the registered callback function
                         result = result || trigger[x].cb.apply(this, [event]);
                     }
@@ -235,7 +234,7 @@ function removeSomeDiv(){
 }
 
 function getWordFromPage(){
-  word=$("#phrsListTab  span.keyword").text();     
+  word=$("#phrsListTab  span.keyword").text();
   if (word==""){
     word=$("input[name='q']").val();
   }
@@ -244,16 +243,16 @@ function getWordFromPage(){
 
 function Greasemonkey_main () {
 	//$("#topImgAd").remove();
-        $("#scontainer"). before('<div class="c-header" style="height:auto;line-height:normal;"><button id="refreshword" style="width: 100%; height: 50px; font-size: 20px; ">Refresh WordBook</button><div class="tipe">快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div><div class="message"></div></div>');  
+        $("#scontainer"). before('<div class="c-header" style="height:auto;line-height:normal;"><button id="refreshword" style="width: 100%; height: 50px; font-size: 20px; ">Refresh WordBook</button><div class="tipe">快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div><div class="message"></div></div>');
         removeSomeDiv();
         $("#refreshword").click(function(){
-              var word=getWordFromPage(); 
+              var word=getWordFromPage();
               $.ajax({
 				type :  "GET",
-				url  :  "http://dict.youdao.com/wordbook/ajax?action=addword&q="+word+"&date="+Date(),								
+				url  :  "http://dict.youdao.com/wordbook/ajax?action=addword&q="+word+"&date="+Date(),
 				cache : false,
 				dataType : "json",
-				success : function(json) { //start success                                  
+				success : function(json) { //start success
                                    if(json.message=="adddone"){
                                         $(".message"). append("<p>OK-->"+word+"</p>");
                                     }else{
@@ -266,7 +265,7 @@ function Greasemonkey_main () {
 $(window).bind('keydown', 'f1', function(){
      removeSomeDiv();
     var word = getWordFromPage();
-    myvo=document.getElementById("dictVoice"); 
+    myvo=document.getElementById("dictVoice");
     myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=1";
     myvo.load();
     myvo.play();
@@ -275,7 +274,7 @@ $(window).bind('keydown', 'f1', function(){
 $(window).bind('keydown', 'f2', function(){
     removeSomeDiv();
     var word = getWordFromPage();
-    myvo=document.getElementById("dictVoice"); 
+    myvo=document.getElementById("dictVoice");
     myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=2";
     myvo.load();
     myvo.play();
