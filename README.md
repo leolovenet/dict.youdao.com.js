@@ -7,7 +7,7 @@ dict.youdao.com.js
 ---------
 1. install [chrome](https://www.google.com/intl/en/chrome/browser/)
 2. open `chrome://extensions/` in your chrome。
-3. drop youdaoPlugin.crx to "Extensions".
+3. download adn drop youdaoPlugin.crx to "Extensions".
 4. done.
 
 使用说明
