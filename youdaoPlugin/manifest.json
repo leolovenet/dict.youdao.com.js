@@ -9,7 +9,7 @@
 
    "content_scripts": [ {
       "all_frames": false,
-      "js": [ "assets/libs/jquery-1.7.2.min.js","assets/scripts/dict.youdao.js" ],
+      "js": [ "assets/libs/jquery-1.7.2.js","assets/scripts/dict.youdao.js" ],
       "matches": [ "http://dict.youdao.com/*", "https://dict.youdao.com/*" ],
       "run_at": "document_end"
    } ],
