@@ -7,7 +7,7 @@
 // @version     1.0
 // ==/UserScript==
 
-window.addEventListener ("load", Greasemonkey_main, false);
+
 
 /*
  * jQuery Hotkeys Plugin
@@ -204,6 +204,9 @@ window.addEventListener ("load", Greasemonkey_main, false);
 })(jQuery || this.jQuery || window.jQuery);
 
 
+
+
+
 function removeSomeDiv(){
         $("#result_navigator").html("");
         $("#follow").remove();
@@ -236,29 +239,38 @@ function Greasemonkey_main () {
                                     }
 				}//end success
 		});	//end ajax
-        });
-
-$(window).bind('keydown', 'f1', function(){
-     removeSomeDiv();
-    var word = getWordFromPage();
-    myvo=document.getElementById("dictVoice");
-    myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=1";
-    myvo.load();
-    myvo.play();
-});
-
-$(window).bind('keydown', 'f2', function(){
-    removeSomeDiv();
-    var word = getWordFromPage();
-    myvo=document.getElementById("dictVoice");
-    myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=2";
-    myvo.load();
-    myvo.play();
-});
-
-$(window).bind('keydown', 'f3', function(){
-    removeSomeDiv();
-  $("#refreshword").click();
-});
+  });
 
 }
+//window.addEventListener ("load", Greasemonkey_main, false);
+
+
+jQuery(document).ready(function(){
+
+  $("ducument,input").bind('keydown', 'f1', function(){
+       removeSomeDiv();
+      var word = getWordFromPage();
+      myvo=document.getElementById("dictVoice");
+      myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=1";
+      myvo.load();
+      myvo.play();
+  });
+
+  $("ducument,input").bind('keydown', 'f2', function(){
+      removeSomeDiv();
+      var word = getWordFromPage();
+      myvo=document.getElementById("dictVoice");
+      myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=2";
+      myvo.load();
+      myvo.play();
+  });
+
+
+  $("ducument,input").bind('keydown', 'f3', function(){
+      removeSomeDiv();
+    $("#refreshword").click();
+  });
+
+  Greasemonkey_main();
+
+});
