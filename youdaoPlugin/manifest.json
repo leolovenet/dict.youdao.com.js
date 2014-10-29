@@ -7,7 +7,8 @@
   /*
   // 去掉常驻内存的后台页，更加节省资源，但是显示不了图标了。
   "background": {
-     "scripts": [ "assets/scripts/background.js" ]
+     "scripts": [ "assets/scripts/background.js" ],
+     "persistent": false
   },
   */
 
