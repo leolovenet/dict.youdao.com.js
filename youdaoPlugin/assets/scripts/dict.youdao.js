@@ -221,7 +221,7 @@ function getWordFromPage(){
 
 function Greasemonkey_main () {
 	//$("#topImgAd").remove();
-        $("#scontainer"). before('<div class="c-header" style="height:auto;line-height:normal;"><button id="refreshword" style="width: 100%; height: 50px; font-size: 20px; ">Refresh WordBook</button><div class="tipe">快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div><div class="message"></div></div>');
+        $("#scontainer"). before('<div class="c-header" style="height:auto;line-height:normal;"><button id="refreshword" style="width: 100%; height: 50px; font-size: 20px; ">Add To WordBook</button><div class="tipe">快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div><div class="message"></div></div>');
         removeSomeDiv();
         $("#refreshword").click(function(){
               var word=getWordFromPage();

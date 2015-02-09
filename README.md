@@ -5,10 +5,8 @@ dict.youdao.com.js
 
 安装说明
 ---------
-1. install [chrome](https://www.google.com/intl/en/chrome/browser/)
-2. open `chrome://extensions/` in your chrome。
-3. download and drop youdaoPlugin.crx to "Extensions".
-4. done.
+1. [Chrome WebStore](https://chrome.google.com/webstore/detail/%E6%9C%89%E9%81%93%E5%AD%97%E5%85%B8%E6%8F%92%E4%BB%B6/mkppoafmldalmhigegpkliengblddnbp/related?utm_source=chrome-app-launcher)
+2. open chrome://extensions/ in your chrome, download and drop youdaoPlugin.crx to "Extensions".
 
 使用说明
 ---------

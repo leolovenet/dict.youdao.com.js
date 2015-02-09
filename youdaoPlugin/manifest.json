@@ -2,44 +2,19 @@
    "name": "有道字典插件",
    "description": "增强有道字典(dict.youdao.com)的交互,针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能。",
    "version": "1.0.0",
-
-
-  /*
-  // 去掉常驻内存的后台页，更加节省资源，但是显示不了图标了。
-  "background": {
-     "scripts": [ "assets/scripts/background.js" ],
-     "persistent": false
-  },
-  */
-
-
    "content_scripts": [ {
       "all_frames": false,
-      "js": [ "assets/libs/jquery-1.7.2.js","assets/scripts/dict.youdao.js" ],
+      "js": [ "assets/libs/jquery-1.7.2.min.js","assets/scripts/dict.youdao.js" ],
       "matches": [ "http://dict.youdao.com/*", "https://dict.youdao.com/*" ],
       "run_at": "document_end"
    } ],
-
-
    "icons": {
       "128": "assets/images/icon128.png",
       "16": "assets/images/icon16.png",
       "48": "assets/images/icon48.png"
    },
-
-   "manifest_version": 3,
+   "manifest_version": 2,
    "minimum_chrome_version": "22",
-
-
-  /*
-  "browser_action": {
-      "default_icon": "assets/images/icon19.png",
-      "default_popup": "popup.html",
-      "default_title": "__MSG_manifest_iconTitle__"
-   },
-   */
-
-
    "page_action": {
       "default_icon": {
         "19": "assets/images/icon19.png",
@@ -47,7 +22,5 @@
       },
       "default_title": "有道字典插件"
    },
-
-
-   "permissions": [ "tabs",  "\u003Call_urls>", "http://*/*", "https://*/*", "webRequest" ]
+   "permissions": [ "tabs", "https://dict.youdao.com/*", "https://dict.youdao.com/*", "webRequest" ]
 }
