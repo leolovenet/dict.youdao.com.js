@@ -13,3 +13,8 @@ OR,open chrome://extensions/ in your chrome, download and drop youdaoPlugin.crx 
 ---------
 
  F1英式发音, F2美式发音,F3 加入单词本
+
+
+ 预览
+ -----
+ ![预览0](youdao.jpg?raw=true "预览0")
