@@ -14,6 +14,11 @@ OR,open chrome://extensions/ in your chrome, download and drop youdaoPlugin.crx 
 
  F1英式发音, F2美式发音,F3 加入单词本
 
+更新说明
+---------
+
+* 删除了烦人的广告 
+
 
  预览
  -----

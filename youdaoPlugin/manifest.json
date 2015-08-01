@@ -1,7 +1,7 @@
 {
    "name": "有道字典插件",
    "description": "增强有道字典(dict.youdao.com)的交互,针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能。",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "content_scripts": [ {
       "all_frames": false,
       "js": [ "assets/libs/jquery-1.7.2.min.js","assets/scripts/dict.youdao.js" ],

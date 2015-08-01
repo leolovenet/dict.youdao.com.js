@@ -25,11 +25,9 @@
  * Might be useful, when you want to pass some other data to your handler
  */
 
-(function(jQuery) {
-
+(function (jQuery) {
   jQuery.hotkeys = {
     version: "0.8",
-
     specialKeys: {
       8: "backspace",
       9: "tab",
@@ -142,22 +140,22 @@
     }
 
     var origHandler = handleObj.handler,
-      keys = handleObj.data.keys.toLowerCase().split(" ");
+        keys = handleObj.data.keys.toLowerCase().split(" ");
 
-    handleObj.handler = function(event) {
+    handleObj.handler = function (event) {
       //      Don't fire in text-accepting inputs that we didn't directly bind to
       if (this !== event.target && (/textarea|select/i.test(event.target.nodeName) ||
-        (jQuery.hotkeys.options.filterTextInputs &&
+          (jQuery.hotkeys.options.filterTextInputs &&
           jQuery.inArray(event.target.type, jQuery.hotkeys.textAcceptingInputTypes) > -1))) {
         return;
       }
 
       var special = event.type !== "keypress" && jQuery.hotkeys.specialKeys[event.which],
-        character = String.fromCharCode(event.which).toLowerCase(),
-        modif = "",
-        possible = {};
+          character = String.fromCharCode(event.which).toLowerCase(),
+          modif = "",
+          possible = {};
 
-      jQuery.each(["alt", "ctrl", "shift"], function(index, specialKey) {
+      jQuery.each(["alt", "ctrl", "shift"], function (index, specialKey) {
 
         if (event[specialKey + 'Key'] && special !== specialKey) {
           modif += specialKey + '+';
@@ -194,82 +192,85 @@
     };
   }
 
-  jQuery.each(["keydown", "keyup", "keypress"], function() {
+  jQuery.each(["keydown", "keyup", "keypress"], function () {
     jQuery.event.special[this] = {
       add: keyHandler
     };
   });
-
 })(jQuery || this.jQuery || window.jQuery);
 
+function removeAD() {
+  var ads = ["#topImgAd", "#ads"];
+  ads.forEach(function (e, i) {
+    $(e).remove();
+  });
+  $("#results-contents").css({width: "100%", "box-sizing": "border-box", padding: "7px 0 0 140px", margin: 0});
+  $("#results").css({float: "none"});
+};
+removeAD();
 
-
-
-
-function removeSomeDiv(){
-        $("#result_navigator").html("");
-        $("#follow").remove();
-}
-
-function getWordFromPage(){
-  word=$("#phrsListTab  span.keyword").text();
-  if (word==""){
-    word=$("input[name='q']").val();
+function getWordFromPage() {
+  var word = $("#phrsListTab  span.keyword").text();
+  if (word === "") {
+    word = $("input[name='q']").val();
   }
   return word.toLowerCase();
-}
+};
 
-function Greasemonkey_main () {
-	//$("#topImgAd").remove();
-        $("#scontainer"). before('<div class="c-header" style="height:auto;line-height:normal;"><button id="refreshword" style="width: 100%; height: 50px; font-size: 20px; ">Add To WordBook</button><div class="tipe">快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div><div class="message"></div></div>');
-        removeSomeDiv();
-        $("#refreshword").click(function(){
-              var word=getWordFromPage();
-              $.ajax({
-				type :  "GET",
-				url  :  "http://dict.youdao.com/wordbook/ajax?action=addword&q="+word+"&date="+Date(),
-				cache : false,
-				dataType : "json",
-				success : function(json) { //start success
-                                   if(json.message=="adddone"){
-                                        $(".message"). append("<p>OK-->"+word+"</p>");
-                                    }else{
-                                        $(".message").html(json.message);
-                                    }
-				}//end success
-		});	//end ajax
+function Greasemonkey_main() {
+  $("#scontainer").before('<div class="c-header" style="height:auto;line-height:normal;"><button id="refreshword" style="width: 100%; height: 50px; font-size: 20px; ">Add To WordBook</button><div class="tipe">快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div><div class="message"></div></div>');
+  $("#refreshword").click(function () {
+    var word = getWordFromPage();
+    $.ajax({
+      type: "GET",
+      url: "http://dict.youdao.com/wordbook/ajax?action=addword&q=" + word + "&date=" + Date(),
+      cache: false,
+      dataType: "json",
+      success: function (json) {
+        if (json.message == "adddone") {
+          $(".message").append("<p>OK >>>> " + word + "</p>");
+        } else {
+          $(".message").html(json.message);
+        }
+      }
+    });
   });
+};
 
-}
-//window.addEventListener ("load", Greasemonkey_main, false);
-
-
-jQuery(document).ready(function(){
-
-  $("ducument,input").bind('keydown', 'f1', function(){
-       removeSomeDiv();
-      var word = getWordFromPage();
-      myvo=document.getElementById("dictVoice");
-      myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=1";
-      myvo.load();
-      myvo.play();
-  });
-
-  $("ducument,input").bind('keydown', 'f2', function(){
-      removeSomeDiv();
-      var word = getWordFromPage();
-      myvo=document.getElementById("dictVoice");
-      myvo.src="http://dict.youdao.com/dictvoice?audio="+word+"&type=2";
-      myvo.load();
-      myvo.play();
-  });
-
-
-  $("ducument,input").bind('keydown', 'f3', function(){
-      removeSomeDiv();
-    $("#refreshword").click();
-  });
-
+jQuery(document).ready(function () {
   Greasemonkey_main();
+  var myvo;
+  $(document).bind('keydown', 'f1', function () {
+    var word = getWordFromPage();
+    myvo = document.getElementById("dictVoice");
+    myvo.src = "http://dict.youdao.com/dictvoice?audio=" + word + "&type=1";
+    myvo.load();
+    myvo.play();
+  }).bind('keydown', 'f2', function () {
+    var word = getWordFromPage();
+    myvo = document.getElementById("dictVoice");
+    myvo.src = "http://dict.youdao.com/dictvoice?audio=" + word + "&type=2";
+    myvo.load();
+    myvo.play();
+  }).bind('keydown', 'f3', function () {
+    $("#refreshword").click();
+  });
 
+  if (typeof MutationObserver === "function") {
+    var target = document.querySelector('#doc');
+    var observer = new MutationObserver(function (mutations) {
+      mutations.forEach(function (m) {
+        var a = m.addedNodes;
+        if (a.length) {
+          for (var i = 0; i < a.length; i++) {
+            if (a[i].id === "scontainer") {
+              removeAD();
+            }
+          }
+        }
+      });
+    });
+    observer.observe(target, {childList: true});
+  }
+  
 });
