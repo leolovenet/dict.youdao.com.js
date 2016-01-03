@@ -1,11 +1,16 @@
 {
-   "name": "有道字典插件",
-   "description": "增强有道字典(dict.youdao.com)的交互,针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能。",
-   "version": "1.0.2",
+   "name": "A key to pronunciation",
+   "description": "this plugin for is a key to pronunciation for collinsdictionary.com and dict.youdao.com",
+   "version": "1.0.4",
    "content_scripts": [ {
-      "matches": [ "http://dict.youdao.com/*", "https://dict.youdao.com/*" ],
+      "matches": [
+          "http://dict.youdao.com/*",
+          "https://dict.youdao.com/*",
+          "http://www.collinsdictionary.com/*",
+          "https://www.collinsdictionary.com/"
+      ],
       "all_frames": false,
-      "js": [ "assets/libs/jquery-1.7.2.min.js","assets/scripts/dict.youdao.js" ],      
+      "js": [ "assets/libs/jquery-1.7.2.min.js","assets/scripts/dict.youdao.js" ],
       "run_at": "document_end"
    } ],
    "icons": {
@@ -20,7 +25,13 @@
         "19": "assets/images/icon19.png",
         "38": "assets/images/icon38.png"
       },
-      "default_title": "有道字典插件"
+      "default_title": "A key to pronunciation for collinsdictionary.com and dict.youdao.com"
    },
-   "permissions": [ "tabs", "https://dict.youdao.com/*", "https://dict.youdao.com/*", "webRequest" ]
+   "permissions": [
+       "tabs", "http://dict.youdao.com/*",
+       "https://dict.youdao.com/*",
+       "http://www.collinsdictionary.com/*",
+       "https://www.collinsdictionary.com/",
+       "webRequest"
+   ]
 }
