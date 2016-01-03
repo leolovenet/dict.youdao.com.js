@@ -1,11 +1,13 @@
 dict.youdao.com.js
 ==================
 
-增强有道字典(dict.youdao.com)的交互,针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能.
+针对 有道字典(dict.youdao.com)与 collinsdictionary.com 新增一键发音的功能
+
+针对有道单词本(dict.youdao.com/wordbook)加入了一键加入的功能
 
 安装说明
 ---------
- [Chrome WebStore](https://chrome.google.com/webstore/detail/%E6%9C%89%E9%81%93%E5%AD%97%E5%85%B8%E6%8F%92%E4%BB%B6/mkppoafmldalmhigegpkliengblddnbp)
+ [Chrome WebStore](https://chrome.google.com/webstore/detail/a-key-to-pronunciation/mkppoafmldalmhigegpkliengblddnbp)
 
 OR,open chrome://extensions/ in your chrome, download and drop youdaoPlugin.crx to "Extensions".
 
@@ -23,3 +25,6 @@ OR,open chrome://extensions/ in your chrome, download and drop youdaoPlugin.crx 
  预览
  -----
  ![预览0](youdao.jpg?raw=true "预览0")
+ 
+ 
+ ![预览0](collinsdictionary.png?raw=true "预览1")
