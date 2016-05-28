@@ -19,6 +19,8 @@ OR,open chrome://extensions/ in your chrome, download and drop youdaoPlugin.crx 
 更新说明
 ---------
 
+* 新增更友好的消息提示
+* 适应新版本有道词典界面
 * 删除了烦人的广告 
 
 

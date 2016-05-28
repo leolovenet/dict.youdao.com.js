@@ -1,8 +1,8 @@
 {
-   "name": "A key to pronunciation",
-   "description": "this plugin for is a key to pronunciation for collinsdictionary.com and dict.youdao.com",
-   "version": "1.0.4",
-   "content_scripts": [ {
+   "name": "One key pronunciation",
+   "description": "One key pronunciation for collinsdictionary.com and dict.youdao.com",
+   "version": "1.0.5",
+   "content_scripts": [{
       "matches": [
           "http://dict.youdao.com/*",
           "https://dict.youdao.com/*",
@@ -10,9 +10,18 @@
           "https://www.collinsdictionary.com/"
       ],
       "all_frames": false,
-      "js": [ "assets/libs/jquery-1.7.2.min.js","assets/scripts/dict.youdao.js" ],
-      "run_at": "document_end"
-   } ],
+      "css": [
+          "/assets/libs/messenger.css",
+          "/assets/libs/messenger-theme-flat.css"
+      ],
+      "js": [
+          "assets/libs/jquery-1.7.2.min.js",
+          "assets/libs/messenger.min.js",
+          "assets/libs/messenger-theme-flat.js",
+          "assets/scripts/dict.youdao.js"
+      ],
+      "run_at": "document_start"
+   }],
    "icons": {
       "128": "assets/images/icon128.png",
       "16": "assets/images/icon16.png",
@@ -25,7 +34,7 @@
         "19": "assets/images/icon19.png",
         "38": "assets/images/icon38.png"
       },
-      "default_title": "A key to pronunciation for collinsdictionary.com and dict.youdao.com"
+      "default_title": "One key to pronunciation for collinsdictionary.com and dict.youdao.com"
    },
    "permissions": [
        "tabs", "http://dict.youdao.com/*",
