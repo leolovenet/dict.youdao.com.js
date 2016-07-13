@@ -1,7 +1,7 @@
 {
    "name": "One key pronunciation",
    "description": "One key pronunciation for collinsdictionary.com and dict.youdao.com",
-   "version": "1.0.5",
+   "version": "1.0.6",
    "content_scripts": [{
       "matches": [
           "http://dict.youdao.com/*",
