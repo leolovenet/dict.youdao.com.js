@@ -16,16 +16,18 @@ jQuery(document).ready(function () {
         $("#ad_btmslot_a").remove();
         $("#ad_leftslot_b").remove();
       });
-      $(".audio_play_button").each(function(index){
 
+      $(".audio_play_button").each(function(index){
           if (index < max) {
               $(this).after('<span style="font-size:12px;color:red;">F' + (index + 1) + '</span>');
               pronunciation.push({e:this,v:keyCode});
               keyCode ++;
           }
       });
-      $(window).keydown(function(ev){
-          for(var i = 0, l = pronunciation.length; i < max; i++) {
+
+      $(window).keydown(function(ev) {
+         var l = pronunciation.length;
+          for(var i = 0; i < max && pronunciation[i]; i++) {
             if (pronunciation[i].v == ev.keyCode) {
                 pronunciation[i].e.click();
                 var lang = $(pronunciation[i].e).siblings(".lang").text();
@@ -44,10 +46,10 @@ jQuery(document).ready(function () {
   } else if (host == "youdao") {
 
       var myvo,word;
-
       jQuery(document).ready(function($) {
         $("#topImgAd").after('<div>快捷键提示: F1英式发音, F2美式发音,F3 加入单词本</div>').remove();
       });
+
       function getWordFromPage_163() {
         var word = $("#phrsListTab  span.keyword").text();
         if (word === "") {
@@ -58,6 +60,7 @@ jQuery(document).ready(function () {
         }
         return word.toLowerCase();
       };
+
       jQuery(window).keydown(function(ev){
         switch (ev.keyCode){
           case 112:
