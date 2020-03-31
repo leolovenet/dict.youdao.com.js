@@ -4,6 +4,8 @@
    "version": "1.0.6",
    "content_scripts": [{
       "matches": [
+          "http://www.youdao.com/*",
+          "https://www.youdao.com/*",
           "http://dict.youdao.com/*",
           "https://dict.youdao.com/*",
           "http://www.collinsdictionary.com/*",
@@ -37,7 +39,10 @@
       "default_title": "One key to pronunciation for collinsdictionary.com and dict.youdao.com"
    },
    "permissions": [
-       "tabs", "http://dict.youdao.com/*",
+       "tabs", 
+       "http://www.youdao.com/*",
+       "https://www.youdao.com/*",
+       "http://dict.youdao.com/*",
        "https://dict.youdao.com/*",
        "http://www.collinsdictionary.com/*",
        "https://www.collinsdictionary.com/",
